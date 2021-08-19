@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js --exec babel-node"
+    "dev": "nodemon src/index.js --exec babel-node",
+    "start": "pm2 start --interpreter babel-node src/index.js --name steplix --watch"
   },
   "keywords": [],
   "author": "",
