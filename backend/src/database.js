@@ -12,17 +12,6 @@ const config = {
   queueLimit: 0,
 };
 
-const configProd = {
-  host: process.env.DB_PROD_HOST,
-  user: process.env.DB_PROD_USER,
-  database: process.env.DB_PROD_NAME,
-  password: process.env.DB_PROD_PASSWORD,
-  port: process.env.DB_PROD_PORT,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-};
-
-const pool = createPool(configProd);
+const pool = createPool(config);
 const asyncPool = pool.promise();
 export default asyncPool;
